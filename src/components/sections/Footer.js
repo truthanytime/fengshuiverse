@@ -16,11 +16,11 @@ const Image = {
 const SOCIAL = [
   {
     icon: Image.instagram,
-    link: 'https://instagram.com/glfylab',
+    link: 'https://instagram.com/fengshuiverse?utm_medium=copy_link',
   },
   {
     icon: Image.discord,
-    link: 'https://discord.gg/ZdXcfd5P',
+    link: 'https://discord.com/invite/3M3EeKGWfs',
   },
   {
     icon: Image.twitter,

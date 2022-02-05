@@ -61,14 +61,14 @@ const IndexPage = () => {
         setPixiucontract(pixiucontract);
       }else{
         window.alert(
-          "Wrong Network! Please select avalanche network."
+          "Wrong Network! Please select Avalanche Mainnet."
         );
       }
     }
   };
 
   const mintNft = async () => {
-    let price="0.09";
+    let price="1";
     let tokenAmount = 1; 
     if (account !== "" && pixiucontract) {
     let e;
