@@ -5,13 +5,16 @@ import Introduction from "@sections/Introduction";
 import Footer from "@sections/Footer";
 import Web3 from "web3";
 import PIXIU from "../build/contracts/PIXIU.json";
+import CounterInput from "react-counter-input";
+import styled from "styled-components";
 
 const IndexPage = () => {
   const [metamaskConnected, setMetamaskConnected] = useState(false);
   const [account, setAccount] = useState();
   const [networkId, setNetworkId] = useState();
   const [pixiucontract, setPixiucontract] =useState(null);
-  const [web3, setWeb3] = useState();
+  const [web3, setWeb3] = useState();  
+  const [mintamount, setmintamount] = useState(1);
 
   useEffect(() => {
     async function listenMMAccount() {
@@ -69,7 +72,8 @@ const IndexPage = () => {
 
   const mintNft = async () => {
     let price="1";
-    let tokenAmount = 1; 
+    let tokenAmount = mintamount; 
+    console.log("mintamount",mintamount);
     if (account !== "" && pixiucontract) {
     let e;
     try {
@@ -117,9 +121,16 @@ const IndexPage = () => {
         account={account}
       />
       <Introduction mintNft={mintNft} />
-      <Footer />
+      <Mintheader><h3>MINT AMOUNT</h3></Mintheader>
+      <div className="minoption">
+      <CounterInput min={1} max={20} onCountChange={ (count) => setmintamount(count) }/></div>
+      <Footer/>
     </Layout>
   );
 };
-
+const Mintheader = styled.div`
+  width: 100%;
+  display:flex;
+  justify-content:center;
+`;
 export default IndexPage;

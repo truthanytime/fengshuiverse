@@ -11,3 +11,25 @@
   font-style: italic;
   src: url("../fonts/Gotham-Ultra-Italic.otf") format("opentype");
 }
+input {
+  color: "white" !important;
+}
+.minoption{
+  
+  width: 100%;
+  display: flex;
+  justify-content:center;
+}
+Mintheader>h3 {
+  justify-content: center;
+  margin:auto;
+}
+.minoption>div {
+  justify-content: center;
+}
+.minoption>div {
+  font-size: 2em !important;
+}
+.minoption>div input {
+  color: #3ef6d6 !important;
+}

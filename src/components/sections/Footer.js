@@ -63,7 +63,6 @@ const Footer = () => {
               }
             </SocialIcons>
           </SocialContainer>
-
           <CopyrightContainer>
             <Copyright>
               <Img fluid={copyrightImage} placeholderStyle={{ visibility: 'hidden' }} />
